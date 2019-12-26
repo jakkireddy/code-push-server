@@ -93,7 +93,7 @@ $ pm2 stop process.json
 ## CHECK SERVICE IS OK 
 
 ```shell
-$ curl -I http://YOUR_CODE_PUSH_SERVER_IP:3000/
+$ curl -I http://YOUR_CODE_PUSH_SERVER_IP:9027/
 ```
 
 > return httpCode `200 OK`
@@ -161,7 +161,7 @@ $ tail -f "output file path"
 - oss (aliyun)
 - tencentcloud
 
-## Default listen Host/Port  0.0.0.0/3000 
+## Default listen Host/Port  0.0.0.0/9027
 
 > you can change it in process.json, env: PORT,HOST
 
@@ -172,13 +172,13 @@ $ tail -f "output file path"
 
 ```shell
 $ npm install code-push-cli@latest -g
-$ code-push login http://YOU_SERVICE_IP:3000 #login in browser account:admin password:123456
+$ code-push login http://YOU_SERVICE_IP:9027 #login in browser account:admin password:123456
 ```
 
 > change admin password eg.
 
 ```shell
-$ curl -X PATCH -H "Authorization: Bearer mytoken" -H "Accept: application/json" -H "Content-Type:application/json" -d '{"oldPassword":"123456","newPassword":"654321"}' http://YOU_SERVICE_IP:3000/users/password
+$ curl -X PATCH -H "Authorization: Bearer mytoken" -H "Accept: application/json" -H "Content-Type:application/json" -d '{"oldPassword":"123456","newPassword":"654321"}' http://YOU_SERVICE_IP:9027/users/password
 ```
 
 

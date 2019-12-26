@@ -3,7 +3,7 @@
         {
             "name"      : "code-push-server",
             "max_memory_restart" : "300M",
-            "script"    : "code-push-server",
+            "script"    : "/Users/jakki/projects/trisysit-poc/code-push-server/bin/www",
             "instances"  : "max", 
             "exec_mode"  : "cluster",
             "env" : {

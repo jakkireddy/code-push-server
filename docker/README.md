@@ -81,7 +81,7 @@ $ sudo docker service ps code-push-server_server
 
 ## Simple authentication of access interface
 
-`$ curl -I http: // YOUR_CODE_PUSH_SERVER_IP: 3000 /`
+`$ curl -I http: // YOUR_CODE_PUSH_SERVER_IP: 9027 /`
 
 Returns `200 OK`
 

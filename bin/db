@@ -24,8 +24,8 @@ var yargs = require('yargs')
         type: 'string'
       }
     })
-    .example('$0 init --dbname codepush --dbhost localhost --dbuser root --dbpassword 123456 --dbport 3306 --force', '初始化code-push-server数据库')
-    .example('$0 upgrade --dbname codepush --dbhost localhost --dbuser root --dbpassword 123456 --dbport 3306', '升级code-push-server数据库')
+    .example('$0 init --dbname codepush --dbhost localhost --dbuser root --dbpassword 123456 --dbport 3306 --force', 'Initialize the code-push-server database')
+    .example('$0 upgrade --dbname codepush --dbhost localhost --dbuser root --dbpassword 123456 --dbport 3306', 'Upgrade the code-push-server database')
     .default({dbname: 'codepush', dbhost: 'localhost', dbuser: 'root', dbpassword: null})
     .help('h')
     .alias('h', 'help');

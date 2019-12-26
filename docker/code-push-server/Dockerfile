@@ -5,6 +5,6 @@ RUN npm config set registry https://registry.npm.taobao.org/ \
 
 COPY ./process.json /process.json
 
-EXPOSE 3000
+EXPOSE 9027
 
 CMD ["pm2-docker", "start", "/process.json"]

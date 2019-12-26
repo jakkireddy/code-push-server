@@ -45,5 +45,3 @@ define("IS_USE_DIFF_TEXT_YES", 1);
 
 
 define("CURRENT_DB_VERSION", '0.5.0');
-
-

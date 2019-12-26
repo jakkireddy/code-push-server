@@ -50,7 +50,7 @@ $ react-native link react-native-code-push #Connect to the project, prompt for i
 Based on code-push-server service
 
 `` `shell
-$ code-push login http: // YOUR_CODE_PUSH_SERVER_IP: 3000 #Log in to the browser to obtain a token, username: admin, password: 123456
+$ code-push login http: // YOUR_CODE_PUSH_SERVER_IP: 9027 #Log in to the browser to obtain a token, username: admin, password: 123456
 $ code-push app add CodePushDemoiOS ios react-native #Create iOS version, get Production DeploymentKey
 $ code-push app add CodePushDemoAndroid android react-native #Create android version, get Production DeploymentKey
 `` `
@@ -63,7 +63,7 @@ Edit the `Info.plist` file and add` CodePushDeploymentKey` and `CodePushServerUR
 
 1. The `CodePushDeploymentKey` value is set to the Production DeploymentKey value of CodePushDemo-ios.
 
-2. Set the value of `CodePushServerURL` to the code-push-server service address http: // YOUR_CODE_PUSH_SERVER_IP: 3000 / When not on the same machine, please change YOUR_CODE_PUSH_SERVER_IP to the external network IP or domain name address.
+2. Set the value of `CodePushServerURL` to the code-push-server service address http: // YOUR_CODE_PUSH_SERVER_IP: 9027 / When not on the same machine, please change YOUR_CODE_PUSH_SERVER_IP to the external network IP or domain name address.
 
 3. Change the default version number 1.0 to three digits 1.0.0
 
@@ -82,7 +82,7 @@ Edit `MainApplication.java`
 
 1. Replace YourKey with CodePushDemo-android's Production DeploymentKey value
 
-2. The value of `YourCodePushServerUrl` is set to the code-push-server service address http: // YOUR_CODE_PUSH_SERVER_IP: 3000 / When not on the same machine, please change YOUR_CODE_PUSH_SERVER_IP to the external network IP or domain name address.
+2. The value of `YourCodePushServerUrl` is set to the code-push-server service address http: // YOUR_CODE_PUSH_SERVER_IP: 9027 / When not on the same machine, please change YOUR_CODE_PUSH_SERVER_IP to the external network IP or domain name address.
 
 3. Change the default version number 1.0 to three digits 1.0.0
 
