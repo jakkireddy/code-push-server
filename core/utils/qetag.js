@@ -1,7 +1,7 @@
-// 计算文件的eTag，参数为buffer或者readableStream或者文件路径
+// Calculate the eTag of the file. The parameter is buffer or readableStream or file path.
 function getEtag(buffer,callback){
 
-	// 判断传入的参数是buffer还是stream还是filepath
+	// determine whether the passed parameter is buffer or stream or filepath
 	var mode = 'buffer';
 
 	if(typeof buffer === 'string'){
@@ -11,7 +11,7 @@ function getEtag(buffer,callback){
 		mode='stream';
 	}
 
-	// sha1算法
+	// sha1 algorithm
 	var sha1 = function(content){
 		var crypto = require('crypto');
 		var sha1 = crypto.createHash('sha1');
@@ -19,7 +19,7 @@ function getEtag(buffer,callback){
 		return sha1.digest();
 	};
 
-	// 以4M为单位分割
+	// Divide by 4M
 	var blockSize = 4*1024*1024;
 	var sha1String = [];
 	var prefix = 0x16;
@@ -58,7 +58,7 @@ function getEtag(buffer,callback){
 		}
 		var sha1Buffer = Buffer.concat(sha1String,blockCount * 20);
 
-		// 如果大于4M，则对各个块的sha1结果再次sha1
+		// If it is greater than 4M, the sha1 result of each block is sha1 again
 		if(blockCount > 1){
 			prefix = 0x96;
 			sha1Buffer = sha1(sha1Buffer);

@@ -5,7 +5,7 @@ function define(name, value) {
     });
 }
 
-//定义支持的平台
+// Define supported platforms
 define("IOS", 1);
 define("IOS_NAME", 'iOS');
 define("ANDROID", 2);
@@ -13,7 +13,7 @@ define("ANDROID_NAME", 'Android');
 define("WINDOWS", 3);
 define("WINDOWS_NAME", 'Windows');
 
-//定义支持的应用类型
+// define supported application types
 define("REACT_NATIVE", 1);
 define("REACT_NATIVE_NAME", 'React-Native');
 define("CORDOVA", 2);
@@ -39,7 +39,7 @@ define("DEPLOYMENT_FAILED", 2);
 
 define("DIFF_MANIFEST_FILE_NAME", 'hotcodepush.json');
 
-//文本文件是否使用google diff-match-patch 计算差异
+// whether the text file uses google diff-match-patch to calculate the difference
 define("IS_USE_DIFF_TEXT_NO", 0);
 define("IS_USE_DIFF_TEXT_YES", 1);
 

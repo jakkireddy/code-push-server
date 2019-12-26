@@ -22,18 +22,18 @@ CodePush Server is a CodePush progam server! microsoft CodePush cloud is slow in
 - oss *storage bundle file in [aliyun](https://www.aliyun.com/product/oss)*
 - tencentcloud *storage bundle file in [tencentcloud](https://cloud.tencent.com/product/cos)*
 
-## qq交流群 
+## qq Exchange Group
 
-- QQ群: 628921445
-- QQ群: 535491067
+-QQ Group: 628921445
+-QQ Group: 535491067
 
-## 正确使用code-push热更新
+## Correctly use code-push hot update
 
-- 苹果App允许使用热更新[Apple's developer agreement](https://developer.apple.com/programs/ios/information/iOS_Program_Information_4_3_15.pdf), 为了不影响用户体验，规定必须使用静默更新。 Google Play不能使用静默更新，必须弹框告知用户App有更新。中国的android市场必须采用静默更新（如果弹框提示，App会被“请上传最新版本的二进制应用包”原因驳回）。
-- react-native 不同平台bundle包不一样，在使用code-push-server的时候必须创建不同的应用来区分(eg. CodePushDemo-ios 和 CodePushDemo-android)
-- react-native-code-push只更新资源文件,不会更新java和Objective C，所以npm升级依赖包版本的时候，如果依赖包使用的本地化实现, 这时候必须更改应用版本号(ios修改Info.plist中的CFBundleShortVersionString, android修改build.gradle中的versionName), 然后重新编译app发布到应用商店。
-- 推荐使用code-push release-react 命令发布应用，该命令合并了打包和发布命令(eg. code-push release-react CodePushDemo-ios ios -d Production)
-- 每次向App Store提交新的版本时，也应该基于该提交版本同时向code-push-server发布一个初始版本。(因为后面每次向code-push-server发布版本时，code-puse-server都会和初始版本比较，生成补丁版本)
+-Apple App allows hot updates [Apple's developer agreement] (https://developer.apple.com/programs/ios/information/iOS_Program_Information_4_3_15.pdf), in order to not affect the user experience, it is required to use silent updates. Google Play cannot use silent updates. You must pop the box to inform users that the App has an update. The android market in China must adopt a silent update (if the pop-up box prompts, the app will be rejected by "Please upload the latest version of the binary application package").
+-react-native Bundle packages are different for different platforms. When using code-push-server, different applications must be created to distinguish them (eg. CodePushDemo-ios and CodePushDemo-android)
+-react-native-code-push only updates the resource files, not java and Objective C, so when npm upgrades the dependent package version, if the localized implementation used by the dependent package, you must change the application version number (ios modify Info CFBundleShortVersionString in .plist, android modify the versionName in build.gradle), and then recompile the app and publish it to the app store.
+-It is recommended to use the code-push release-react command to release the application, which combines the package and release commands (eg. Code-push release-react CodePushDemo-ios ios -d Production)
+-Every time you submit a new version to the App Store, you should also release an initial version to code-push-server based on the submitted version. (Because every time a version is released to code-push-server later, code-puse-server will be compared with the initial version to generate a patch version)
 
 
 ### shell login

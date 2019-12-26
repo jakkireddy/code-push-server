@@ -335,12 +335,12 @@ common.uploadFileToQiniu = function (key, filePath) {
         formUploader.putFile(uploadToken, key, filePath, putExtra, (respErr, respBody, respInfo) => {
           if(respErr) {
             log.error('uploadFileToQiniu putFile:', respErr);
-            // 上传失败， 处理返回代码
+            // upload failed, processing return code
             return reject(new AppError.AppError(JSON.stringify(respErr)));
           } else {
             log.debug('uploadFileToQiniu putFile respBody:', respBody);
             log.debug('uploadFileToQiniu putFile respInfo:', respInfo);
-            // 上传成功， 处理返回值
+            // The upload is successful and the return value is processed
             if (respInfo.statusCode == 200) {
               return resolve(respBody.hash);
             } else {
